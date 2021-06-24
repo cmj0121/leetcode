@@ -6,6 +6,7 @@ BIN := $(subst .rs,,$(SRC))
 all: $(BIN)	# build all sub-folder
 
 clean:		# clean all
+	@rm -f $(BIN)
 
 help:		# show this message
 	@printf "Usage: make [OPTION]\n"
