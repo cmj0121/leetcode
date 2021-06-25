@@ -1,6 +1,6 @@
 .PHONY: all clean help
 
-SRC := $(wildcard */*/*.rs)
+SRC := $(wildcard problems/*/*.rs)
 BIN := $(subst .rs,,$(SRC))
 
 all: $(BIN)	# build all sub-folder
