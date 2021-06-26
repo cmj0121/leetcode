@@ -1,3 +1,2 @@
-set tabstop=4
-set sw=4
-set expandtab
+au BufRead,BufNewFile *.rs set ft=rust
+au Filetype rust setlocal expandtab ts=4 sw=4 
