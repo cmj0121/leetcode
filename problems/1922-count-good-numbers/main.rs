@@ -20,14 +20,14 @@ pub fn count_good_numbers(n: i64) -> i32 {
             }
 
             ret as i32
-        },
+        }
     }
 }
 
 fn main() {
-    assert_eq!( count_good_numbers(1), 5 );
-    assert_eq!( count_good_numbers(3), 100 );
-    assert_eq!( count_good_numbers(4), 400 );
-    assert_eq!( count_good_numbers(5), 2000 );
-    assert_eq!( count_good_numbers(50), 564908303 );
+    assert_eq!(count_good_numbers(1), 5);
+    assert_eq!(count_good_numbers(3), 100);
+    assert_eq!(count_good_numbers(4), 400);
+    assert_eq!(count_good_numbers(5), 2000);
+    assert_eq!(count_good_numbers(50), 564908303);
 }

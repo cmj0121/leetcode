@@ -5,7 +5,7 @@ fn remove_element(nums: &mut Vec<i32>, val: i32) -> i32 {
         let pos = nums.len() - idx - 1;
 
         if nums[pos] == val {
-            nums[pos] = nums[slots-1];
+            nums[pos] = nums[slots - 1];
             slots -= 1;
         }
     }
@@ -14,6 +14,6 @@ fn remove_element(nums: &mut Vec<i32>, val: i32) -> i32 {
 }
 
 fn main() {
-    let mut case = vec![4, 4, 4 , 4];
+    let mut case = vec![4, 4, 4, 4];
     println!("{} -> {:?}", remove_element(&mut case, 4), case);
 }

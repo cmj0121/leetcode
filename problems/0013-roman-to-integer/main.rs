@@ -18,7 +18,7 @@ fn roman_to_int(s: String) -> i32 {
         ret += match idx {
             0 => rtoi(ch),
             _ => {
-                let prev = rtoi(s.chars().nth(idx-1).unwrap());
+                let prev = rtoi(s.chars().nth(idx - 1).unwrap());
                 let mut curr = rtoi(ch);
 
                 if prev < curr {
@@ -32,7 +32,6 @@ fn roman_to_int(s: String) -> i32 {
 
     ret
 }
-
 
 fn main() {
     assert_eq!(roman_to_int("MCMXCIV".to_string()), 58);

@@ -9,5 +9,5 @@ fn build_array(nums: Vec<i32>) -> Vec<i32> {
 }
 
 fn main() {
-    assert_eq!( build_array(vec![0,2,1,5,3,4]), vec![0,1,2,4,5,3] );
+    assert_eq!(build_array(vec![0, 2, 1, 5, 3, 4]), vec![0, 1, 2, 4, 5, 3]);
 }

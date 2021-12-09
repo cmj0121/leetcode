@@ -11,3 +11,9 @@ steps:
       - pip install pre-commit
       - pre-commit install --install-hooks
       - pre-commit run --from-ref ${DRONE_COMMIT_BEFORE} --to-ref ${DRONE_COMMIT_SHA} --all-files
+  - name: linter for rust
+    image: rust:1.57.0-alpine3.14
+    commands:
+      - apk add --no-cache musl-dev
+      - rustup component add rustfmt
+      - rustfmt --check $(find . -name '*.rs')

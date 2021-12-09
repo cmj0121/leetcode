@@ -6,6 +6,6 @@ fn can_win_nim(n: i32) -> bool {
 }
 
 fn main() {
-    assert_eq!( can_win_nim(4), false );
-    assert_eq!( can_win_nim(1), true );
+    assert_eq!(can_win_nim(4), false);
+    assert_eq!(can_win_nim(1), true);
 }

@@ -1,12 +1,12 @@
 struct MinStack {
-    stack: Vec<(i32, i32)>
+    stack: Vec<(i32, i32)>,
 }
 
 impl MinStack {
     /** initialize your data structure here. */
     fn new() -> Self {
-        let stack: Vec<(i32, i32)> = vec!{};
-        Self{ stack: stack }
+        let stack: Vec<(i32, i32)> = vec![];
+        Self { stack: stack }
     }
 
     fn push(&mut self, val: i32) {

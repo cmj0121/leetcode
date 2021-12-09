@@ -6,14 +6,14 @@ fn word_pattern(pattern: String, s: String) -> bool {
 
     for word in s.split(" ") {
         match pattern.chars().nth(idx) {
-            Some(ch) => {
-                match cache.get(&ch) {
-                    Some(w) if w != word => return false,
-                    Some(_) => {},
-                    None if cache.values().any(|v| v == word) => return false,
-                    None => { cache.insert(ch, word.to_string()); },
+            Some(ch) => match cache.get(&ch) {
+                Some(w) if w != word => return false,
+                Some(_) => {}
+                None if cache.values().any(|v| v == word) => return false,
+                None => {
+                    cache.insert(ch, word.to_string());
                 }
-            }
+            },
             None => return false,
         }
 
@@ -24,8 +24,20 @@ fn word_pattern(pattern: String, s: String) -> bool {
 }
 
 fn main() {
-    assert_eq!( word_pattern("abba".to_string(), "dog cat cat dog".to_string()), true);
-    assert_eq!( word_pattern("abba".to_string(), "dog cat cat fish".to_string()), false);
-    assert_eq!( word_pattern("aaaa".to_string(), "dog cat cat dog".to_string()), false);
-    assert_eq!( word_pattern("abba".to_string(), "dog dog dog dog".to_string()), false);
+    assert_eq!(
+        word_pattern("abba".to_string(), "dog cat cat dog".to_string()),
+        true
+    );
+    assert_eq!(
+        word_pattern("abba".to_string(), "dog cat cat fish".to_string()),
+        false
+    );
+    assert_eq!(
+        word_pattern("aaaa".to_string(), "dog cat cat dog".to_string()),
+        false
+    );
+    assert_eq!(
+        word_pattern("abba".to_string(), "dog dog dog dog".to_string()),
+        false
+    );
 }

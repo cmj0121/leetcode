@@ -1,4 +1,3 @@
-
 fn make_equal(words: Vec<String>) -> bool {
     /*
         // Slow version
@@ -36,6 +35,13 @@ fn make_equal(words: Vec<String>) -> bool {
 }
 
 fn main() {
-    assert_eq!( make_equal( vec!["abc".to_string(),"aabc".to_string(),"bc".to_string()]), true);
-    assert_eq!( make_equal( vec!["ab".to_string(),"b".to_string()]), false);
+    assert_eq!(
+        make_equal(vec![
+            "abc".to_string(),
+            "aabc".to_string(),
+            "bc".to_string()
+        ]),
+        true
+    );
+    assert_eq!(make_equal(vec!["ab".to_string(), "b".to_string()]), false);
 }

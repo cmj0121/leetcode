@@ -4,7 +4,7 @@ fn my_sqrt(x: i32) -> i32 {
         2 | 3 => 1,
         _ => {
             let mut start = 1;
-            let mut end = x/2 + 1;
+            let mut end = x / 2 + 1;
 
             while start < end {
                 let idx = (start + end) / 2;

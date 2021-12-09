@@ -15,8 +15,8 @@ fn range_bitwise_and(left: i32, right: i32) -> i32 {
 }
 
 fn main() {
-    assert_eq!( range_bitwise_and(5, 7), 4);
-    assert_eq!( range_bitwise_and(0, 0), 0);
-    assert_eq!( range_bitwise_and(1, 2147483647), 0);
-    assert_eq!( range_bitwise_and(3, 4), 0);
+    assert_eq!(range_bitwise_and(5, 7), 4);
+    assert_eq!(range_bitwise_and(0, 0), 0);
+    assert_eq!(range_bitwise_and(1, 2147483647), 0);
+    assert_eq!(range_bitwise_and(3, 4), 0);
 }

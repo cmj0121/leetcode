@@ -2,7 +2,7 @@ fn my_pow(x: f64, n: i32) -> f64 {
     if x == 1.0 {
         return 1.0;
     } else if x == -1.0 {
-        if  n % 2 == 0 {
+        if n % 2 == 0 {
             return 1.0;
         }
         return -1.0;
@@ -28,7 +28,7 @@ fn my_pow(x: f64, n: i32) -> f64 {
 }
 
 fn main() {
-    assert!( (my_pow(2.0, 10) - 1024.00000).abs() < 0.00001);
-    assert!( (my_pow(2.10000, 3) -9.26100).abs() < 0.00001);
-    assert!( (my_pow(2.00000, -2) - 0.25000).abs() < 0.00001);
+    assert!((my_pow(2.0, 10) - 1024.00000).abs() < 0.00001);
+    assert!((my_pow(2.10000, 3) - 9.26100).abs() < 0.00001);
+    assert!((my_pow(2.00000, -2) - 0.25000).abs() < 0.00001);
 }

@@ -12,7 +12,7 @@ pub fn reverse(x: i32) -> i32 {
     }
 
     while val > 0 {
-        if ret > (std::i32::MAX - (val%10)) / 10 {
+        if ret > (std::i32::MAX - (val % 10)) / 10 {
             // too large
             return 0;
         }

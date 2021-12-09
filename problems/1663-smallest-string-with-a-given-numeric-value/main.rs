@@ -11,7 +11,7 @@ fn get_smallest_string(n: i32, k: i32) -> String {
             remains = 0;
         }
 
-        if remains < 0 || ( remains > 0 && idx == 0) {
+        if remains < 0 || (remains > 0 && idx == 0) {
             panic!("should not be here: {} {}: {:?}", remains, idx, ret);
         }
     }
@@ -25,6 +25,6 @@ fn get_smallest_string(n: i32, k: i32) -> String {
 }
 
 fn main() {
-    assert_eq!( get_smallest_string(3, 27), "aay".to_string() );
-    assert_eq!( get_smallest_string(5, 73), "aaszz".to_string() );
+    assert_eq!(get_smallest_string(3, 27), "aay".to_string());
+    assert_eq!(get_smallest_string(5, 73), "aaszz".to_string());
 }

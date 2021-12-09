@@ -10,11 +10,11 @@ fn is_ugly(n: i32) -> bool {
                 x /= 2
             }
 
-            while  x != 0 && x % 3 == 0 {
+            while x != 0 && x % 3 == 0 {
                 x /= 3
             }
 
-            while  x != 0 && x % 5 == 0 {
+            while x != 0 && x % 5 == 0 {
                 x /= 5
             }
 
