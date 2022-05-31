@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.0.1
+    rev: v4.2.0
     hooks:
       - id: check-yaml
       - id: end-of-file-fixer
@@ -15,7 +15,7 @@ repos:
 
   # -------- shell-script related linter --------
   - repo: https://github.com/jumanjihouse/pre-commit-hooks
-    rev: 2.1.5
+    rev: 2.1.6
     hooks:
       - id: shellcheck
       - id: script-must-have-extension
@@ -31,22 +31,22 @@ repos:
       args:
         - --ignore=E501
   - repo: https://github.com/pre-commit/mirrors-autopep8
-    rev: v1.5.7
+    rev: v1.6.0
     hooks:
       - id: autopep8
   - repo: https://github.com/asottile/reorder_python_imports
-    rev: v2.6.0
+    rev: v3.1.0
     hooks:
       - id: reorder-python-imports
         args: [--py3-plus]
   - repo: https://github.com/asottile/add-trailing-comma
-    rev: v2.2.1
+    rev: v2.2.3
     hooks:
       - id: add-trailing-comma
         args: [--py36-plus]
 
   # -------- golang related linter --------
   - repo: https://github.com/golangci/golangci-lint
-    rev: v1.43.0
+    rev: v1.46.2
     hooks:
       - id: golangci-lint
