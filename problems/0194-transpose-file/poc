@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+
+FILE=file.txt
+seq "$(head -n 1 "$FILE" | awk '{print NF}')" | xargs -I {} bash -c "awk '{print \${}}' $FILE | xargs"
