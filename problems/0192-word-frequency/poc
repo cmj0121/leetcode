@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+
+FILE=words.txt
+sed -E 's/ +/\n/g' "$FILE" | sed '/^$/d' | sort | uniq -c | sort -nr | awk '{print $2 " " $1}'
