@@ -1,9 +1,6 @@
-SRC := $(wildcard problems/*/*.rs)
-BIN := $(subst .rs,,$(SRC))
+.PHONY: all clean test build upgrade help
 
-.PHONY: all clean test run build upgrade help
-
-all: $(BIN)		# default action
+all: build		# default action
 	@pre-commit install --install-hooks > /dev/null
 	@git config commit.template .git-commit-template
 
@@ -11,8 +8,10 @@ clean:			# clean-up environment
 	@rm -f $(BIN)
 
 test:			# run test
+	cargo test --verbose --all
 
-run:			# run in the local environment
+build: test		# build the project
+	cargo build --all-targets
 
 upgrade:		# upgrade all the necessary packages
 	pre-commit autoupdate
