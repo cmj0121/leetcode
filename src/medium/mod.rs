@@ -1,0 +1,17 @@
+//! The LeetCode medium problem and solved via Rust
+mod problem_0007_reverse_integer;
+mod problem_0008_string_to_integer;
+mod problem_0022_generate_paretheses;
+mod problem_0024_swap_node_in_pairs;
+mod problem_0050_pow_x_n;
+mod problem_0091_decode_ways;
+mod problem_0098_validate_binary_search_tree;
+mod problem_0122_path_sum;
+mod problem_0172_factorial_trailing_zeros;
+mod problem_0189_rotate_array;
+mod problem_0201_bitwise_and_of_nubmbers_range;
+mod problem_1663_smallest_string_with_a_given_numeric_value;
+mod problem_1673_find_the_most_competitive_subsequence;
+mod problem_1679_max_number_of_k_sum_pairs;
+mod problem_1910_remove_all_occurrences_of_a_substring;
+mod problem_1922_count_good_numbers;
