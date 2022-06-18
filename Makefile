@@ -5,7 +5,7 @@ all: build		# default action
 	@git config commit.template .git-commit-template
 
 clean:			# clean-up environment
-	@rm -f $(BIN)
+	cargo clean
 
 test:			# run test
 	cargo test --verbose --all
@@ -21,6 +21,3 @@ help:			# show this message
 	@printf "\n"
 	@perl -nle 'print $$& if m{^[\w-]+:.*?#.*$$}' $(MAKEFILE_LIST) | \
 		awk 'BEGIN {FS = ":.*?#"} {printf "    %-18s %s\n", $$1, $$2}'
-
-%: %.rs
-	rustc $< -o $@
